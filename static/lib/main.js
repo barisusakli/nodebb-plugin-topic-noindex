@@ -9,7 +9,7 @@ $('document').ready(function () {
 
 	function toggleNoIndex() {
 		var tid = ajaxify.data.tid;
-		socket.emit('plugins.noindex.toggleIndex', { tid: tid }, function (err, data) {
+		socket.emit('plugins.noindex.toggleNoIndex', { tid: tid }, function (err, data) {
 			if (err) {
 				return app.alertError(err);
 			}
