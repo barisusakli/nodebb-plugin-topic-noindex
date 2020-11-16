@@ -4,10 +4,10 @@
 
 $('document').ready(function () {
 	$(window).on('action:topic.tools.load', function () {
-		$('.toggleIndex').on('click', toggleIndex);
+		$('.toggleNoIndex').on('click', toggleNoIndex);
 	});
 
-	function toggleIndex() {
+	function toggleNoIndex() {
 		var tid = ajaxify.data.tid;
 		socket.emit('plugins.noindex.toggleIndex', { tid: tid }, function (err, data) {
 			if (err) {
