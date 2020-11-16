@@ -20,7 +20,7 @@ plugin.filterTopicBuild = async function (hookData) {
 
 plugin.addThreadTool = async function (hookData) {
 	const noindex = parseInt(hookData.topic.noindex, 10) === 1;
-	const isAdmin = await privileges.user.isAdministrator(hookData.uid);
+	const isAdmin = await privileges.users.isAdministrator(hookData.uid);
 	if (isAdmin) {
 		hookData.tools.push({
 			class: 'toggleNoIndex',
@@ -35,7 +35,7 @@ plugin.addThreadTool = async function (hookData) {
 SocketPlugins.noindex = {};
 
 SocketPlugins.noindex.toggleNoIndex = async function (socket, data) {
-	const canEdit = await privileges.user.isAdministrator(socket.uid)
+	const canEdit = await privileges.users.isAdministrator(socket.uid)
 	if (!canEdit) {
 		throw new Error('[[error:no-privileges]]');
 	}
