@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-topic-noindex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows setting noindex meta tag on individual topics",
   "main": "library.js",
   "repository": {
