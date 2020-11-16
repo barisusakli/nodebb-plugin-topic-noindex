@@ -1,0 +1,19 @@
+{
+	"library": "./library.js",
+	"hooks": [
+		{
+			"hook": "filter:topic.build",
+			"method": "filterTopicBuild"
+		},
+		{
+			"hook": "filter:topic.thread_tools",
+			"method": "addThreadTool"
+		}
+	],
+	"staticDirs": {
+		"static": "./static"
+	},
+	"scripts": [
+		"static/lib/main.js"
+	]
+}

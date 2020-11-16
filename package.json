@@ -1,0 +1,29 @@
+{
+  "name": "nodebb-plugin-topic-noindex",
+  "version": "1.0.0",
+  "description": "Allows setting noindex meta tag on individual topics",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barisusakli/nodebb-plugin-topic-noindex"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "meta",
+    "noindex"
+  ],
+  "author": {
+    "name": "Barış Soner Uşaklı",
+    "email": "baris@nodebb.org",
+    "url": "https://github.com/barisusakli"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barisusakli/nodebb-plugin-topic-noindex/issues"
+  },
+  "readmeFilename": "README.md",
+  "nbbpm": {
+    "compatibility": "^1.15.0"
+  }
+}
