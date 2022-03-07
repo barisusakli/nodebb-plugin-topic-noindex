@@ -10,9 +10,6 @@
 			"method": "addThreadTool"
 		}
 	],
-	"staticDirs": {
-		"static": "./static"
-	},
 	"scripts": [
 		"static/lib/main.js"
 	]
