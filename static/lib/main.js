@@ -1,20 +1,23 @@
 'use strict';
 
-/* global $, window, socket, ajaxify, app */
-
 $('document').ready(function () {
 	$(window).on('action:topic.tools.load', function () {
 		$('.toggleNoIndex').on('click', toggleNoIndex);
 	});
 
+	function showAlert(type, msg) {
+		require(['alerts'], function (alerts) {
+			alerts[type](msg);
+		});
+	}
+
 	function toggleNoIndex() {
-		var tid = ajaxify.data.tid;
-		socket.emit('plugins.noindex.toggleNoIndex', { tid: tid }, function (err, data) {
+		socket.emit('plugins.noindex.toggleNoIndex', { tid: ajaxify.data.tid }, function (err, data) {
 			if (err) {
-				return app.alertError(err);
+				return showAlert('error', err);
 			}
 
-			app.alertSuccess(data.noindex ? 'noindex meta tag added' : 'noindex meta tag removed');
+			showAlert('success', data.noindex ? 'noindex meta tag added' : 'noindex meta tag removed');
 			ajaxify.refresh();
 		});
 	}

@@ -35,7 +35,7 @@ plugin.addThreadTool = async function (hookData) {
 SocketPlugins.noindex = {};
 
 SocketPlugins.noindex.toggleNoIndex = async function (socket, data) {
-	const canEdit = await privileges.users.isAdministrator(socket.uid)
+	const canEdit = await privileges.users.isAdministrator(socket.uid);
 	if (!canEdit) {
 		throw new Error('[[error:no-privileges]]');
 	}
